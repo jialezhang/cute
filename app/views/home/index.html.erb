@@ -1,0 +1,16 @@
+<% if session[:user_id] !=nil %>
+<%= @user.name %>
+<%= link_to "log out ", logout_path ,:method => "delete"%>
+<div class="user_own_upload">
+	<%= link_to 'user_own_upload', new_photo_path %>
+</div>
+<div id="settings">
+	<%= link_to 'settings', settings_profile_path %>
+</div>
+<% end %>
+<% @photos.each  do |photo| %>
+<div class="photos">
+	<p><%= image_tag photo.content.url %></p>
+	<p><%= photo.description %></p>
+</div>
+<% end %>

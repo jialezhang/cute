@@ -1,0 +1,2 @@
+module PhotoesHelper
+end

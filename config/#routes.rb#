@@ -1,0 +1,22 @@
+Cute::Application.routes.draw do
+
+
+  get "home/index"
+
+  root :to => 'home#index'
+  resources :blogs
+  resources :users
+  resources :acounts
+  resources :password
+  
+  
+
+  get 'signup' => 'users#new', :as => :signup
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'login' => 'user_sessions#create', :as => :login
+  delete 'logout' => 'user_sessions#destroy', :as => :logout
+  #based on the name search for a specific user
+ get ':name', :controller => 'people', :action => 'show', :as => :person
+
+
+end
