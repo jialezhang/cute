@@ -1,0 +1,4 @@
+CUTE
+====
+
+First rails app
