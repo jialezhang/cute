@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 #  before_filter :authorize
   protect_from_forgery
+  helper_method :logined?, :current_user
 
   protected
 
@@ -8,7 +9,9 @@ class ApplicationController < ActionController::Base
     @current_user ||= login_from_session unless defined?(@current_user)
     @current_user
   end
-
+ def logined?
+    !!current_user
+  end
 
   def login_from_session
     if session[:user_id].present?
@@ -33,7 +36,7 @@ class ApplicationController < ActionController::Base
   private
 
   def authorize
-    unless User.find(session[:user_id])
+    unless logined?
       redirect_to login_url, :notice => "Please Log In"
     end
   end

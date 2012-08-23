@@ -1,0 +1,16 @@
+%h3
+  Password Setting
+  = form_for current_user, :url => settings_password_path, :method => "put" do |f|
+    %fieldset
+      %p
+        = f.label :current_password
+        = f.password_field :current_password
+      %p
+        = f.label :password
+        = f.password_field :password
+      %p
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation
+      %p
+        = f.submit 'update', :class => 'btn'
+    

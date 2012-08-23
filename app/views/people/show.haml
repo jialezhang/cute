@@ -1,0 +1,30 @@
+#person_district
+  .container-fluid
+    .row-fluid
+      .span12
+    .row-fluid.photos_show_border    
+      .row-fluid
+        .span12
+      .row-fluid
+        .container-fluid
+          .row-fluid
+            .span3
+              = image_tag @person.avatar.large.url
+            .span9
+              %ul
+                %li
+                  Name:
+                  = @person.name
+      .row-fluid
+        .span12
+      .row-fluid
+        Latest upload photos
+      .row-fluid
+        .span12
+      .row-fluid
+        %ul
+          - @photos.each do |photo|
+            %li.span2
+              = image_tag photo.content.scan.url
+    
+  

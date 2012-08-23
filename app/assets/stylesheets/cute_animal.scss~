@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'QikkiRegRegular';
+    src: url('brand/Qarmic_sans_Abridged-webfont.eot');
+    src: url('brand/Qarmic_sans_Abridged-webfont.eot?#iefix') format('embedded-opentype'),
+         url('brand/Qarmic_sans_Abridged-webfont.woff') format('woff'),
+         url('brand/Qarmic_sans_Abridged-webfont.ttf') format('truetype'),
+         url('brand/Qarmic_sans_Abridged-webfont.svg#QikkiRegRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'PacificoRegular';
+    src: url('photo_des/Pacifico-webfont.eot');
+    src: url('photo_des/Pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('photo_des/Pacifico-webfont.woff') format('woff'),
+         url('photo_des/Pacifico-webfont.ttf') format('truetype'),
+         url('photo_des/Pacifico-webfont.svg#PacificoRegular') format('svg');
+         
+    
+}
+html, body {
+  background-color: #2F4C68;
+  }
+.photo_des{
+  font: {
+    family: PacificoRegular, Arial, sans-serif;
+    size: 25px;
+  }
+}
+.brand{
+  a {
+    text-decoration: none;
+  }
+  font:{
+    family: 'QikkiRegRegular', Arial, sans-serif;
+    size: 30px;
+    }
+
+}
+.navbar-inner{
+  ul {
+    list-style: none;
+      li{
+        a {text-decoration:none;}
+        margin-top: 10px;
+        }
+      }
+        
+        font: {
+          family: Arial, sans-serif;
+          size: 18px;          
+          }      
+    }

@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
 
   def show
 
-    @photos = @person.photos.order_by([[:created_at, :desc]])
+    @photos = @person.photos.order_by([[:created_at, :desc]]).limit(4)
     @photos_count = @person.photos.count
   end
 

@@ -9,10 +9,10 @@ class Settings::PasswordsController < ApplicationController
   def update
     @current_user = current_user
    if @current_user.update_attributes params[:user]
-      flash[:success] = 'Successful Update.'
+     flash[:success] = 'Successful Update.'
      redirect_to root_url, :notice => "password has been successfully changed"
-    else
-      render :show
-    end
+   else
+     render :show
+   end
   end
 end

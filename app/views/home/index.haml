@@ -1,0 +1,35 @@
+.container-fluid
+  .row-fluid.photos_show_border
+    - @photos.each do |photo|
+      %ul.photo_show
+        %li.avatar.span2
+          = image_tag photo.user.avatar.thumb.url        
+        %li.span10
+          %ul
+            .row-fluid.span12
+            %li.span12
+              %ul
+                %li.span2.btn.comments
+                  comments
+                %li.span2.btn.likes
+                  Likes
+                %li.span2.btn.fork
+                  fork
+          %ul.photo
+            %li
+              = image_tag photo.content.url
+            %li.photo_des
+              = photo.description
+  .row-fluid.span2
+    - if logined?
+      - if @photos_own.nil?
+        %p
+          = current_user.name
+      - else
+        - @photos_own.each do |photo_own|
+          %p.photo_des
+            = photo_own.description
+          %p
+            = image_tag photo_own.content.scan.url
+ 
+              

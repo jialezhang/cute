@@ -1,0 +1,16 @@
+%h3
+  Profile Setting
+  = form_for current_user.profile, :url => settings_profile_path, :method => "put" do |f|
+    %fieldset
+      %p
+        = f.label :name
+        = f.text_field :name
+      %p
+        = f.label :url
+        = f.text_field :url
+      %p
+        = f.label :description
+        = f.text_area :description
+      %p
+        = f.submit 'update', :class => 'btn'
+    
