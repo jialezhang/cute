@@ -4,3 +4,6 @@ class Blog
   field :content, type: String
   field :tag, type: String
 end
+
+
+

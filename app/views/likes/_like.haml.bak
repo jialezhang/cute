@@ -1,0 +1,2 @@
+.btn
+  = @like.user_id

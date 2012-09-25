@@ -8,7 +8,7 @@ Cute::Application.routes.draw do
   resources :photos
 #  resources :blogs
   resources :users
-#  resources :acounts
+  resources :likes
 #  resources :password
   
   
@@ -26,3 +26,4 @@ Cute::Application.routes.draw do
   end
 
 end
+

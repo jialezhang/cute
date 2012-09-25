@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+// App = {
+
+ 
+$(document).ready(  function(){
+  //back to top
+  $('#container').click(function(){
+      $('html, body').animate({ scrollTop: 0}, 400);
+        return false
+    });
+  // $(".photol").click(function(){
+  //    return like(this)
+   // console.log(this)
+ // })
+})

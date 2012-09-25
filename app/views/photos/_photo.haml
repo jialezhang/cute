@@ -1,0 +1,12 @@
+- @photos.each do |photo|
+  .photo_all
+    %ul.avatar
+      = image_tag photo.user.avatar.thumb.url
+  %ul.photo
+    %li
+      = like_tag(photo)
+    %li.photo_effect
+      = image_tag photo.content.large.url
+    %li
+      %input{:type => "button",:onclick => "return App.like(this)"}
+    

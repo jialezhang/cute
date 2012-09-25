@@ -4,7 +4,6 @@ class BlogsController < ApplicationController
   before_filter :authenticate_user!
   def index
     @blogs = Blog.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @blogs }
